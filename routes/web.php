@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use Illuminate\Support\Facades\Auth;
 // use App\Http\Controllers;
 
 
@@ -22,7 +23,7 @@ Route::get("/about", [PagesController::class, 'about']);
 Route::get("/services", [PagesController::class, 'services']);
 Route::get("/main", [PagesController::class, 'main']);
 Route::get("/admin", [PagesController::class, 'admin']);
-Route::get("/admi", [PagesController::class, 'admi']);
+
  
 Route::resource('posts', PostsController::class);
 Route::delete('/posts/{id}', 'PostsController@destroy')->name('posts.destroy');
